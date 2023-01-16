@@ -1,8 +1,9 @@
-import re
+s = input("Entrer un mot ou une phrase")
+s = ' '.join(ch for ch in s if ch.isalnum())
+def isPalindrome(s): return s == s[::-1]
+rep = isPalindrome(s)
 
-def is_palindrome(string):
-    string = re.sub(r'[^a-zA-Z]', '', string)
-    string = string.lower()
-    return string == string[::-1]
-pala = str(input("donne une phrase :"))
-print(is_palindrome(pala))
+if rep:
+    print("C'est un palindrome")
+else:
+    print("Ce n'est pas un palindrome")
